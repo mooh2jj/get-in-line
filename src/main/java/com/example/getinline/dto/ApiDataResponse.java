@@ -1,6 +1,7 @@
 package com.example.getinline.dto;
 
-import com.uno.getinline.constant.ErrorCode;
+
+import com.example.getinline.constant.ErrorCode;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
