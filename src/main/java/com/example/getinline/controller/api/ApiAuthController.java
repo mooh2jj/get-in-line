@@ -1,8 +1,11 @@
 package com.example.getinline.controller.api;
 
 
+import com.example.getinline.dto.ApiDataResponse;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Spring Data REST 로 API 를 만들어서 당장 필요가 없어진 컨트롤러.
@@ -12,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @deprecated 0.1.2
  */
 @Deprecated
-//@RequestMapping("/api")
-//@RestController
+@RequestMapping("/api")
+@RestController
 public class ApiAuthController {
-
+//
 //    @PostMapping("/sign-up")
 //    public ApiDataResponse<String> signUp(@RequestBody AdminRequest adminRequest) {
 //        return ApiDataResponse.empty();
