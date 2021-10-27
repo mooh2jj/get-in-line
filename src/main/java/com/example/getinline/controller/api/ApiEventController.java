@@ -1,6 +1,8 @@
 package com.example.getinline.controller.api;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,13 +16,14 @@ import java.util.List;
  */
 @Deprecated
 @RequiredArgsConstructor
-//@Validated
-//@RequestMapping("/api")
-//@RestController
+@Validated
+@RequestMapping("/api")
+@RestController
 public class ApiEventController {
 
     @GetMapping("/events")
-    public List<String> getEvents() {
+    public List<String> getEvents() throws HttpRequestMethodNotSupportedException {
+//        throw new HttpRequestMethodNotSupportedException("spring 에러 테스트");
         return List.of("event1", "event2");
     }
 
@@ -31,6 +34,7 @@ public class ApiEventController {
 
     @GetMapping("/events/{eventId}")
     public String getEvent(@PathVariable Integer eventId) {
+//        throw new RuntimeException("런타임 에러");
         return "event " + eventId;
     }
 
